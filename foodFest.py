@@ -5,7 +5,7 @@
 class FoodFest:
     
     # initializer
-    def __init__(self, festName, regStallCount, premStallCount, revCost, tax, regRevCount, premRevCount):
+    def __init__(self, festName, regStallCount, premStallCount, revCost, tax, regRevCount, premRevCount, revCategory):
         self.festName = festName
         self.regStallCount = regStallCount
         self.premStallCount = premStallCount
@@ -13,6 +13,7 @@ class FoodFest:
         self.tax = tax
         self.regRevCount = regRevCount
         self.premRevCount = premRevCount
+        self.revCategory = revCategory
         regRevCount = 0
         premRevCount = 0
 
@@ -30,6 +31,7 @@ class FoodFest:
 
     def getRevCost(self, newValue):
         self.revCost = newValue
+        self.revCost >= 0
 
 
     # method to compute net REGULAR cost
@@ -45,6 +47,32 @@ class FoodFest:
     def computeNetPremiumCost(self):
         self.revCost * 2
         return self.revCost
+    
+    
+    # method to request reservation
+    def requestReservation(self):
+        self.regStallCount = int(input("Enter the stall count for reservation: "))
+        self.regStallCount = str(input("Enter category of reservation: "))
+
+        if self.regStallCount < 0:
+            return False
+        
+        if self.revCategory == "regular":
+            return True
+
+
+        if self.revCategory == "premium":
+            return True
+        
+        else:
+            return False
+        
+        
+
+        
+
+
+
     
 
 
