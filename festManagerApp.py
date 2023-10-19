@@ -10,8 +10,8 @@ class FestManagerApp:
     # PIII write the code to implement the User Interaction as described in print document
 
     def getUserInput(self):
-        regStallCount = int(input("Enter the stall count for reservation: "))
-        revCategory = str(input("Enter category of reservation: "))
+        regStallCount = True
+        revCategory = True
         return regStallCount, revCategory
 
 
@@ -19,9 +19,16 @@ class FestManagerApp:
         var = self.getUserInput()
         print(var[0], var[1])
 
+
+
 # PI create instance of FestManagerApp
 
+ManagerAppObj = FestManagerApp()
+foodFestObj = foodFest()
+
 # PI call the method main using the instance of FestManagerApp
-    main()
-    getUserInput()
-    printUserInput()
+
+foodFestObj.requestReservation()
+ManagerAppObj.main()
+ManagerAppObj.getUserInput()
+ManagerAppObj.printUserInput()
