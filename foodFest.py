@@ -52,7 +52,7 @@ class FoodFest:
     # method to request reservation
     def requestReservation(self):
         self.regStallCount = int(input("Enter the stall count for reservation: "))
-        self.regStallCount = str(input("Enter category of reservation: "))
+        self.revCategory = str(input("Enter category of reservation: "))
 
         if self.regStallCount < 0:
             return False
