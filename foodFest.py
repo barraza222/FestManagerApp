@@ -31,6 +31,23 @@ class FoodFest:
     def getRevCost(self, newValue):
         self.revCost = newValue
 
+
+    # method to compute net REGULAR cost
+
+    def computeNetRegularCost(self):
+        self.tax = self.revCost / 100
+        return self.revCost + self.tax
+    
+
+
+    # method to compute net PREMIUM cost
+
+    def computeNetPremiumCost(self):
+        self.revCost * 2
+        return self.revCost
+    
+
+
     
     
 
