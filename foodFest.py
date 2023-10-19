@@ -4,6 +4,7 @@
 # PI create a class FoodFest
 class FoodFest:
     
+    # initializer
     def __init__(self, festName, regStallCount, premStallCount, revCost, tax, regRevCount, premRevCount):
         self.festName = festName
         self.regStallCount = regStallCount
@@ -14,6 +15,25 @@ class FoodFest:
         self.premRevCount = premRevCount
         regRevCount = 0
         premRevCount = 0
+
+    # accessor methods
+    def getFestName(self):
+        return self.festName
+    
+    def getRevCost(self):
+        return self.revCost
+    
+    def getPremStallCount(self):
+        return self.premStallCount
+    
+    # mutator method
+
+    def getRevCost(self, newValue):
+        self.revCost = newValue
+
+    
+    
+
 
     
         
